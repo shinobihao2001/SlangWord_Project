@@ -9,9 +9,10 @@ public class spFunction {
         String fileURL="slang.txt";
 
         try (BufferedReader reader = new BufferedReader(new FileReader(fileURL))) {
-            String row=reader.readLine();
+        String row;
         while ((row=reader.readLine())!=null){
             String[] tokens=row.split("`");
+            //System.out.println(row);
             keyValue.put(tokens[0], tokens[1]);
             valueKey.put(tokens[1], tokens[0]);
         }
