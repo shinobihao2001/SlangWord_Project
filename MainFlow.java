@@ -1,4 +1,4 @@
-import java.util.Hashtable;
+import java.util.HashMap;
 import java.util.Scanner;
 
 class MainFlow{
@@ -13,13 +13,14 @@ class MainFlow{
     public int mainScreen(Scanner input){
         sp.clearScreen();
 
-        System.out.println(("Press 1 to find dertemined with input slang word"));
+        System.out.println(("Press 1 to find definition with input slang word"));
+        System.out.println(("Press 2 to find slangdword with input keyword"));
         int choice=Integer.parseInt(input.nextLine());
         
         return choice;
     }
 
-    public void MainFunction(Scanner input,Hashtable<String,String> keyValue,Hashtable<String,String> valueKey){
+    public void MainFunction(Scanner input,HashMap<String,String> keyValue,HashMap<String,String> valueKey){
         
         int choice=-1;
 
@@ -30,7 +31,9 @@ class MainFlow{
                 case 1:
                     findingFunction.findDefFunction(input, keyValue, valueKey);
                     break;
-
+                case 2:
+                    findingFunction.findSlangFunction(input, keyValue, valueKey);
+                    break;
                 default:
                 break;
             }

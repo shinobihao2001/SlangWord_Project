@@ -1,10 +1,10 @@
-import java.util.Hashtable;
+import java.util.HashMap;
 import java.util.Scanner;
 
 class App {
 
-    static Hashtable<String,String> keyValue=new Hashtable<String, String>();
-    static Hashtable<String,String> valueKey=new Hashtable<String, String>();
+    static HashMap<String,String> keyValue=new HashMap<String, String>();
+    static HashMap<String,String> valueKey=new HashMap<String, String>();
     static spFunction sp=new spFunction();
     static Scanner input=new Scanner(System.in);
 

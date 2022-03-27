@@ -1,11 +1,12 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Hashtable;
+import java.util.HashMap;
+import java.util.Scanner;
 
 public class spFunction {
     
-    void readData(Hashtable<String,String> keyValue,Hashtable<String,String> valueKey){
+    void readData(HashMap<String,String> keyValue,HashMap<String,String> valueKey){
         String fileURL="slang.txt";
 
         try (BufferedReader reader = new BufferedReader(new FileReader(fileURL))) {
@@ -26,5 +27,17 @@ public class spFunction {
         for (int i=0;i<100;i++){
             System.out.println();
         }
+    }
+
+      
+    public void backFuction(Scanner input){
+
+        int choice=1;
+
+        while (choice!=0){
+            System.out.println("Press 0 to continue");
+            choice=Integer.parseInt(input.nextLine());
+        }
+      
     }
 }
