@@ -51,4 +51,26 @@ public class CURDFunction {
 
         sp.backFuction(input);
     }
+
+    public void delSlangFunction(Scanner input,HashMap<String,String> keyValue,HashMap<String,String> valueKey){
+        sp.clearScreen();
+        System.out.println("Input the slang word to delete: ");
+        String slang=input.nextLine();
+
+        String def=keyValue.get((slang));
+
+        if (def==null){
+            System.out.println("Not found ");
+        }
+        else{
+            int choice=sp.confirmFuction(input);
+            if (choice==1){
+                keyValue.remove(slang);
+                valueKey.remove(def);
+                System.out.println("Delete Success");
+            }
+        }
+
+        sp.backFuction(input);
+    }
 }

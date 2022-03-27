@@ -40,4 +40,17 @@ public class spFunction {
         }
       
     }
+
+    public int confirmFuction(Scanner input){
+
+        int choice=1;
+
+        while (choice!=0){
+            System.out.println("Press 1 to confirm the action");
+            System.out.println("Press 0 to cancel");
+            choice=Integer.parseInt(input.nextLine());
+        }
+      
+        return choice;
+    }
 }

@@ -8,6 +8,8 @@ class MainFlow{
 
     public CURDFunction curdFunction=new CURDFunction();// cac chuc nang them xoa sua
 
+    public RandomFunction randomFunction=new RandomFunction();
+
     public spFunction sp=new spFunction();
 
     public int mainScreen(Scanner input){
@@ -18,6 +20,8 @@ class MainFlow{
         System.out.println(("Press 3 to see finding history"));
         System.out.println(("Press 4 to add new slangword"));
         System.out.println(("Press 5 to edit slangword"));
+        System.out.println(("Press 6 to delete slangword"));
+        System.out.println(("Press 8 to random a slangword"));
         int choice=Integer.parseInt(input.nextLine());
         
         return choice;
@@ -45,6 +49,12 @@ class MainFlow{
                     break;
                 case 5:
                     curdFunction.editSlangFunction(input, keyValue, valueKey);
+                    break;
+                case 6:
+                    curdFunction.delSlangFunction(input, keyValue, valueKey);
+                    break;
+                case 8:
+                    randomFunction.slangToDay(input, keyValue, valueKey);
                     break;
                 default:
                 break;
