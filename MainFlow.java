@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -20,7 +21,7 @@ class MainFlow{
         return choice;
     }
 
-    public void MainFunction(Scanner input,HashMap<String,String> keyValue,HashMap<String,String> valueKey){
+    public void MainFunction(Scanner input,HashMap<String,String> keyValue,HashMap<String,String> valueKey,ArrayList<String> log){
         
         int choice=-1;
 
@@ -29,10 +30,10 @@ class MainFlow{
 
             switch(choice){
                 case 1:
-                    findingFunction.findDefFunction(input, keyValue, valueKey);
+                    findingFunction.findDefFunction(input, keyValue,log);
                     break;
                 case 2:
-                    findingFunction.findSlangFunction(input, keyValue, valueKey);
+                    findingFunction.findSlangFunction(input, keyValue,log);
                     break;
                 default:
                 break;

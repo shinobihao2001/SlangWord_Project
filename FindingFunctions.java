@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -12,9 +13,11 @@ class FindingFunction{
         return reusult;
     }
     
-    public void findDefFunction(Scanner input,HashMap<String,String> keyValue,HashMap<String,String> valueKey){
+    public void findDefFunction(Scanner input,HashMap<String,String> keyValue,ArrayList<String> log){
         String slangWord=findDefScreen(input);
         String Def=keyValue.get(slangWord);
+        
+        log.add("Find with slang: "+slangWord);
 
         if (Def!=null){
             System.out.println("Def: " + Def);
@@ -30,9 +33,10 @@ class FindingFunction{
         return reusult;
     }
 
-    public void findSlangFunction(Scanner input,HashMap<String,String> keyValue,HashMap<String,String> valueKey){
+    public void findSlangFunction(Scanner input,HashMap<String,String> keyValue,ArrayList<String> log){
         String Def=findSlangScreen(input);
 
+        log.add("Find with keyword:"+Def);
         //Duyệt qua toàn bổ hash
         int count=0;
         for (String word: keyValue.keySet()){
@@ -46,6 +50,17 @@ class FindingFunction{
             System.out.println("Not found");
         }
 
+        sp.backFuction(input);
+    }
+
+    public void showHistoryFunction(Scanner input,ArrayList<String> log){
+        sp.clearScreen();
+        System.out.println("Finding history:");
+        int count=0;
+        for (String token : log) {
+            count++;
+            System.out.println(count+"=>"+token);
+        }
         sp.backFuction(input);
     }
 }

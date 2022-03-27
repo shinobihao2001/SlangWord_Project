@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -7,7 +8,7 @@ class App {
     static HashMap<String,String> valueKey=new HashMap<String, String>();
     static spFunction sp=new spFunction();
     static Scanner input=new Scanner(System.in);
-
+    static ArrayList<String> log=new ArrayList<String>();// lưu lại lịch sử
 
     public static void main(String[] args) {
 
@@ -16,7 +17,7 @@ class App {
 
         MainFlow mainFlow=new MainFlow();
         // main function
-        mainFlow.MainFunction(input, keyValue, valueKey);
+        mainFlow.MainFunction(input, keyValue, valueKey,log);
         //ghi dữ liệu xuống lại
     }
 }
