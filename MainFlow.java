@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 class MainFlow{
 
+
+
     public FindingFunction findingFunction=new FindingFunction();// các chức năng tìm kiếm
 
     public CURDFunction curdFunction=new CURDFunction();// cac chuc nang them xoa sua
@@ -14,7 +16,7 @@ class MainFlow{
 
     public int mainScreen(Scanner input){
         sp.clearScreen();
-
+        System.out.println(("Press 0 to out"));
         System.out.println(("Press 1 to find definition with input slang word"));
         System.out.println(("Press 2 to find slangdword with input keyword"));
         System.out.println(("Press 3 to see finding history"));
@@ -37,6 +39,8 @@ class MainFlow{
             choice=mainScreen(input);
 
             switch(choice){
+                case 0:
+                    break;
                 case 1:
                     findingFunction.findDefFunction(input, keyValue,log);
                     break;
