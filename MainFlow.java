@@ -22,6 +22,8 @@ class MainFlow{
         System.out.println(("Press 5 to edit slangword"));
         System.out.println(("Press 6 to delete slangword"));
         System.out.println(("Press 8 to random a slangword"));
+        System.out.println(("Press 9 to play finding definition"));
+        System.out.println(("Press 10 to play finding slang"));
         int choice=Integer.parseInt(input.nextLine());
         
         return choice;
@@ -55,6 +57,12 @@ class MainFlow{
                     break;
                 case 8:
                     randomFunction.slangToDay(input, keyValue, valueKey);
+                    break;
+                case 9:
+                    randomFunction.slangGame(input, keyValue, valueKey);
+                    break;
+                case 10:
+                    randomFunction.defGame(input, keyValue, valueKey);
                     break;
                 default:
                 break;
