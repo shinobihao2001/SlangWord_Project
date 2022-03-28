@@ -4,6 +4,16 @@ import java.util.Scanner;
 public class CURDFunction {
     public spFunction sp=new spFunction();
 
+
+    public void resetFunction(Scanner input,HashMap<String,String> keyValue,HashMap<String,String> valueKey){
+        sp.clearScreen();
+        keyValue.clear();
+        valueKey.clear();
+        sp.readData(keyValue, valueKey,"slangOriginal.txt");
+        System.out.println("Reset done");
+        sp.backFuction(input);
+    }
+
     public void addSlangFunction(Scanner input,HashMap<String,String> keyValue,HashMap<String,String> valueKey){
         String newSlang;
         String newDef;

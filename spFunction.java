@@ -8,7 +8,8 @@ import java.util.Scanner;
 
 public class spFunction {
     
-    void readData(HashMap<String,String> keyValue,HashMap<String,String> valueKey,String fileURL){
+
+    public void readData(HashMap<String,String> keyValue,HashMap<String,String> valueKey,String fileURL){
         try (BufferedReader reader = new BufferedReader(new FileReader(fileURL))) {
         String row;
         while ((row=reader.readLine())!=null){
@@ -17,7 +18,7 @@ public class spFunction {
             //if (keyValue.get(tokens[0])!=null){
           //      System.out.println("Trung");
          //   } code kiểm tra dữ liệu đã bị trùng
-         
+
             keyValue.put(tokens[0], tokens[1]);
             valueKey.put(tokens[1], tokens[0]);
         }
@@ -27,7 +28,7 @@ public class spFunction {
         }
     }
 
-    void writeData(HashMap<String,String> keyValue,String fileURL){
+    public void writeData(HashMap<String,String> keyValue,String fileURL){
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileURL))) {
             for (String slang:keyValue.keySet()){
                 String def=keyValue.get((slang));

@@ -23,6 +23,7 @@ class MainFlow{
         System.out.println(("Press 4 to add new slangword"));
         System.out.println(("Press 5 to edit slangword"));
         System.out.println(("Press 6 to delete slangword"));
+        System.out.println(("Press 7 to reset to original"));
         System.out.println(("Press 8 to random a slangword"));
         System.out.println(("Press 9 to play finding definition"));
         System.out.println(("Press 10 to play finding slang"));
@@ -58,6 +59,9 @@ class MainFlow{
                     break;
                 case 6:
                     curdFunction.delSlangFunction(input, keyValue, valueKey);
+                    break;
+                case 7:
+                    curdFunction.resetFunction(input, keyValue, valueKey);
                     break;
                 case 8:
                     randomFunction.slangToDay(input, keyValue, valueKey);
